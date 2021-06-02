@@ -1,0 +1,29 @@
+{
+	"name": "snowpack-boilerplate",
+	"version": "1.0.0",
+	"description": "A simple boilerplate for creating React applications using Snowpack.",
+	"author": {
+		"name": "Miloš Milanović",
+		"email": "mmilanovic016@gmail.com"
+	},
+	"license": "LGPL-3.0-or-later",
+	"scripts": {
+		"clean": "rm -rf dist/*",
+		"format": "prettier --write src/**/*.{js,jsx,css,json} *.{js,json}",
+		"start": "snowpack dev",
+		"build": "snowpack build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mmilanovic4/snowpack-boilerplate.git"
+	},
+	"devDependencies": {
+		"@snowpack/plugin-sass": "^1.4.0",
+		"prettier": "^2.3.0",
+		"snowpack": "^3.5.4"
+	},
+	"dependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	}
+}
