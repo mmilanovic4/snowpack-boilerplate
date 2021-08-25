@@ -20,7 +20,7 @@
 	"devDependencies": {
 		"@snowpack/plugin-sass": "^1.4.0",
 		"prettier": "^2.3.2",
-		"snowpack": "^3.8.6"
+		"snowpack": "^3.8.7"
 	},
 	"dependencies": {
 		"react": "^17.0.2",
