@@ -10,20 +10,22 @@
 	"scripts": {
 		"clean": "rm -rf dist/*",
 		"format": "prettier --write src/**/*.{js,jsx,css,json} *.{js,json}",
-		"start": "snowpack dev",
-		"build": "snowpack build"
+		"dev": "snowpack dev",
+		"prod": "snowpack build"
 	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/mmilanovic4/snowpack-boilerplate.git"
 	},
 	"devDependencies": {
-		"@snowpack/plugin-sass": "^1.4.0",
 		"prettier": "^2.3.2",
-		"snowpack": "^3.8.7"
+		"snowpack": "^3.8.8"
 	},
 	"dependencies": {
+		"lodash": "^4.17.21",
 		"react": "^17.0.2",
-		"react-dom": "^17.0.2"
+		"react-dom": "^17.0.2",
+		"react-router": "^5.2.1",
+		"react-router-dom": "^5.2.1"
 	}
 }

@@ -11,7 +11,7 @@ export default {
 		minify: true,
 		target: 'es2018'
 	},
-	plugins: ['@snowpack/plugin-sass'],
+	plugins: [],
 	devOptions: {
 		port: 1234
 	}
