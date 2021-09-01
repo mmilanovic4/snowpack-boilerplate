@@ -1,12 +1,16 @@
 import React, { useEffect } from 'react';
+import { useHistory } from 'react-router';
+import { routes } from '../routes';
 
 const Logout = () => {
+	const history = useHistory();
+
 	useEffect(() => {
 		localStorage?.removeItem('idUser');
 	}, []);
 
 	const goToLogin = () => {
-		window.location.href = '/#login';
+		history?.push(routes?.Login?.path);
 	};
 
 	return (

@@ -1,9 +1,9 @@
 import { keys, map } from 'lodash';
 import { createElement } from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { Dashboard } from '../screens/Dashboard';
-import { Login } from '../screens/Login';
-import { Logout } from '../screens/Logout';
+import { Dashboard } from './screens/Dashboard';
+import { Login } from './screens/Login';
+import { Logout } from './screens/Logout';
 
 const routes = {
 	Logout: {

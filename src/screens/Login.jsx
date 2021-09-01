@@ -1,9 +1,13 @@
 import React from 'react';
+import { useHistory } from 'react-router';
+import { routes } from '../routes';
 
 const Login = () => {
+	const history = useHistory();
+
 	const handleLogin = () => {
 		localStorage?.setItem('idUser', '1');
-		window.location.href = '/';
+		history?.push(routes?.Dashboard?.path);
 	};
 
 	return (

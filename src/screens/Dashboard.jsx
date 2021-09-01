@@ -1,8 +1,12 @@
 import React from 'react';
+import { useHistory } from 'react-router';
+import { routes } from '../routes';
 
 const Dashboard = () => {
+	const history = useHistory();
+
 	const handleLogout = () => {
-		window.location.href = '/#logout';
+		history?.push(routes?.Logout?.path);
 	};
 
 	return (
