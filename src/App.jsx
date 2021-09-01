@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { HashRouter as Router, Switch } from 'react-router-dom';
-import { getRoutes } from './routes/routes';
+import { getRoutes } from './routes';
 
 const App = () => {
 	return (
