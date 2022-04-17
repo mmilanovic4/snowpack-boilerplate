@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { HashRouter as Router, Switch } from 'react-router-dom';
+import { HashRouter as Router, Routes } from 'react-router-dom';
 import { getRoutes } from './routes';
 
 const App = () => {
@@ -7,7 +7,7 @@ const App = () => {
 		<>
 			<Router>
 				<Suspense fallback={<p>Loading...</p>} />
-				<Switch>{getRoutes()}</Switch>
+				<Routes>{getRoutes()}</Routes>
 			</Router>
 		</>
 	);

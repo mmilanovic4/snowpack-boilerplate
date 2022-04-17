@@ -1,13 +1,13 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import { routes } from '../routes';
 
 const Login = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const handleLogin = () => {
 		localStorage?.setItem('idUser', '1');
-		history?.push(routes?.Dashboard?.path);
+		navigate(routes?.Dashboard?.path);
 	};
 
 	return (

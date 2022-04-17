@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import { routes } from '../routes';
 
 const Logout = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		localStorage?.removeItem('idUser');
 	}, []);
 
 	const goToLogin = () => {
-		history?.push(routes?.Login?.path);
+		navigate(routes?.Login?.path);
 	};
 
 	return (

@@ -1,6 +1,6 @@
 import { keys, map } from 'lodash';
 import { createElement } from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { Navigate, Route } from 'react-router-dom';
 import { Dashboard } from './screens/Dashboard';
 import { Login } from './screens/Login';
 import { Logout } from './screens/Logout';
@@ -32,7 +32,7 @@ const isAuthenticated = () => {
 const withAuthentication = (Component) => (props) => {
 	return isAuthenticated()
 		? createElement(Component, { ...props })
-		: createElement(Redirect, {
+		: createElement(Navigate, {
 				...props,
 				to: { pathname: routes?.Login?.path }
 		  });
@@ -43,7 +43,9 @@ const getRoutes = () => {
 		const { isProtected, component, ...props } = routes[key];
 		return createElement(Route, {
 			key,
-			component: isProtected ? withAuthentication(component) : component,
+			element: createElement(
+				isProtected ? withAuthentication(component) : component
+			),
 			...props
 		});
 	});

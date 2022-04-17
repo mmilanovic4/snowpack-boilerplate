@@ -1,12 +1,12 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import { routes } from '../routes';
 
 const Dashboard = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	const handleLogout = () => {
-		history?.push(routes?.Logout?.path);
+		navigate(routes?.Logout?.path);
 	};
 
 	return (
